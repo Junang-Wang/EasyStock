@@ -11,7 +11,7 @@ def compare_zh_index(symbols:list[str], date_range:list[str]):
     start_date, end_date = date_range
     for symbol in symbols:
 
-        df = ak.stock_zh_index_daily(symbol=symbol)
+        df = ak.stock_zh_index_daily_em(symbol=symbol)
         df['date'] = pd.to_datetime(df['date'])
 
         df = df[(df['date'] >= start_date) & (df['date'] <= end_date)]
