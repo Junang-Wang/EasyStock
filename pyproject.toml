@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=64.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eStock"
+version = "0.1.0"
+description = "A toolbox to study stock market"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Junang Wang", email = "wangjunang94@gmail.com"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy>=1.26.0, <2.0.0",
+    "pandas" >=2.0.0
+    "matplotlib" >=3.8.0
+    "akshare",
+]
+
+[tool.setuptools]
+packages = {find = {}}
+
+[tool.setuptools.dynamic]
+readme = {file = "README.md"}
